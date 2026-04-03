@@ -1,5 +1,6 @@
 // @ts-check
-const { devices } = require('@playwright/test');
+import { defineConfig, devices } from '@playwright/test';
+
 
 /**
  * Read environment variables from file.
@@ -12,7 +13,7 @@ const { devices } = require('@playwright/test');
  * @see https://playwright.dev/docs/test-configuration
  * @type {import('@playwright/test').PlaywrightTestConfig}
  */
-const config = {
+export default defineConfig ( {
   testDir: './tests',
   /* Maximum time one test can run for. */
   timeout: 30 * 1000,
@@ -32,16 +33,23 @@ const config = {
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: 'html',
+  reporter:[['list'] ,
+  ['html'],],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Maximum time each action such as `click()` can take. Defaults to 0 (no limit). */
     actionTimeout: 0,
+    
     /* Base URL to use in actions like `await page.goto('/')`. */
-    // baseURL: 'http://localhost:3000',
+     baseURL: 'https://practicesoftwaretesting.com',
+     headless: false,
+     
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
+    launchOptions:{
+      slowMo:800,
+    },
   },
 
   /* Configure projects for major browsers */
@@ -53,7 +61,7 @@ const config = {
       },
     },
 
-    {
+   /*  {
       name: 'firefox',
       use: {
         ...devices['Desktop Firefox'],
@@ -65,7 +73,7 @@ const config = {
       use: {
         ...devices['Desktop Safari'],
       },
-    },
+    }, */
 
     /* Test against mobile viewports. */
     // {
@@ -104,6 +112,6 @@ const config = {
   //   command: 'npm run start',
   //   port: 3000,
   // },
-};
+});
 
-module.exports = config;
+
