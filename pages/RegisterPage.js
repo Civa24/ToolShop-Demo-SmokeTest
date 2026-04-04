@@ -4,18 +4,18 @@ export class RegisterPage extends BasePage{
     constructor(page){
         super(page);
     
-      this.firstNameInput = page.locator('#first_name');
-    this.lastNameInput = page.locator('#last_name');
-    this.dateOfBirthInput = page.locator('#dob');
-    this.streetInput = page.locator('#street');
-    this.postcodeInput = page.locator('#postal_code');
-    this.cityInput = page.locator('#city');
-    this.stateInput = page.locator('#state');
-    this.countryInput = page.locator('#country');
-    this.phoneInput = page.locator('#phone');
-    this.emailInput = page.locator('#email');
-    this.passwordInput = page.locator('#password');
-    this.registerButton = page.getByRole('button', { name: /register/i });
+      this.firstNameInput = page.locator('[data-test="first-name"]')
+    this.lastNameInput = page.locator('[data-test="last-name"]')
+    this.dateOfBirthInput = page.locator('[data-test="dob"]')
+    this.streetInput = page.locator('[data-test="street"]')
+    this.postcodeInput = page.locator('[data-test="postal_code"]')
+    this.cityInput =  page.locator('[data-test="city"]')
+    this.stateInput =  page.locator('[data-test="state"]')
+    this.countryInput =  page.locator('[data-test="country"]')
+    this.phoneInput =  page.locator('[data-test="phone"]')
+    this.emailInput =  page.locator('[data-test="email"]')
+    this.passwordInput =  page.locator('[data-test="password"]')
+    this.registerButton = page.locator('[data-test="register-submit"]')
   }
 
    goto =  async ()=>{

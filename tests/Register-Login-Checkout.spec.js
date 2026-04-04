@@ -1,4 +1,4 @@
-import {test} from "@playwright/test"
+import {test , expect} from "@playwright/test"
 import { BasePage } from "../pages/BasePage"
 import { HomePage } from "../pages/HomePage";
 import { LoginPage } from "../pages/LoginPage";
@@ -11,7 +11,7 @@ test ('Home-Register-Login-Cart-SignOut ToolShop automation',async({page})=>{
 
 
     const year =new Date().getFullYear();
-    const uniqueEmail=`amerko${year}@gmail.com`;
+    const uniqueEmail=`amerkoss${year}@gmail.com`;
 
     const user = {
         firstName : 'Amer',
@@ -34,4 +34,10 @@ test ('Home-Register-Login-Cart-SignOut ToolShop automation',async({page})=>{
     await loginPage.clickRegisterYourAccount();
     await registerPage.register(user);
 
-})
+    await expect(page).toHaveURL(/auth\/login/);
+
+    await loginPage.login(user.email, user.password);
+    await homePage.goto();
+    await page.pause();
+
+});
