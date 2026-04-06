@@ -3,15 +3,17 @@ import { BasePage } from "../pages/BasePage"
 import { HomePage } from "../pages/HomePage";
 import { LoginPage } from "../pages/LoginPage";
 import { RegisterPage } from "../pages/RegisterPage";
+import { ProductPage } from "../pages/ProductPage";
 
 test ('Home-Register-Login-Cart-SignOut ToolShop automation',async({page})=>{
     const homePage = new HomePage(page);
     const loginPage = new LoginPage(page);
     const registerPage = new RegisterPage(page);
+    const productPage = new ProductPage(page);
 
 
     const year =new Date().getFullYear();
-    const uniqueEmail=`amerkoss${year}@gmail.com`;
+    const uniqueEmail=`amesrkos${year}@gmail.com`;
 
     const user = {
         firstName : 'Amer',
@@ -32,12 +34,15 @@ test ('Home-Register-Login-Cart-SignOut ToolShop automation',async({page})=>{
     await homePage.goto();
     await homePage.clickSignin();
     await loginPage.clickRegisterYourAccount();
+    
     await registerPage.register(user);
 
     await expect(page).toHaveURL(/auth\/login/);
 
     await loginPage.login(user.email, user.password);
     await homePage.goto();
-    await page.pause();
+    await homePage.openAnyProduct();
+    await productPage.addToCart();
+   // await page.pause();
 
 });
