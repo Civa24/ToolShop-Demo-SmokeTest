@@ -39,7 +39,7 @@ test ('Home-Register-Login-Cart-SignOut ToolShop automation',async({page})=>{
     
     await registerPage.register(user);
 
-    await expect(page).toHaveURL(/auth\/login/);
+    await expect(page).toHaveURL('https://practicesoftwaretesting.com/auth/login');
 
     await loginPage.login(user.email, user.password);
     await homePage.goto();
