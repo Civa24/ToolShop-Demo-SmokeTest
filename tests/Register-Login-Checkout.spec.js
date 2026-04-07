@@ -15,7 +15,7 @@ test ('Home-Register-Login-Cart-SignOut ToolShop automation',async({page})=>{
 
 
     const year =new Date().getFullYear();
-    const uniqueEmail=`amerksss${year}@gmail.com`;
+    const uniqueEmail=`amesrkino${Date.now()}@gmail.com`;
 
     const user = {
         firstName : 'Amer',
@@ -47,5 +47,5 @@ test ('Home-Register-Login-Cart-SignOut ToolShop automation',async({page})=>{
     await productPage.addToCart();
    
    await headerPage.openCart();
-await page.pause();
+//await page.pause();
 });
