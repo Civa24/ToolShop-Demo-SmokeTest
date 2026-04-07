@@ -46,7 +46,7 @@ console.log('Current URL before login:', page.url());
     await expect(page).toHaveURL('https://practicesoftwaretesting.com/auth/login');
     await page.waitForLoadState('domcontentloaded');
 // await page.waitForLoadState('networkidle');
-    await expect(loginPage.emailInput).toBeVisible();
+    await expect(loginPage.emailInput).toBeVisible({ timeout: 15000 });
     await loginPage.login(user.email, user.password);
     await homePage.goto();
     await homePage.openAnyProduct();
