@@ -15,6 +15,7 @@ test ('Home-Register-Login-Cart-SignOut ToolShop automation',async({page})=>{
 
 
     const year =new Date().getFullYear();
+       // const uniqueEmail=`amesrkino${year}@gmail.com`;
     const uniqueEmail=`amesrkino${Date.now()}@gmail.com`;
 
     const user = {
@@ -38,6 +39,7 @@ test ('Home-Register-Login-Cart-SignOut ToolShop automation',async({page})=>{
     await loginPage.clickRegisterYourAccount();
     
     await registerPage.register(user);
+    //await  expect(page).toHaveURL(/auth\/login/);
 
     await expect(page).toHaveURL('https://practicesoftwaretesting.com/auth/login');
 
