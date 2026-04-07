@@ -4,6 +4,7 @@ import { HomePage } from "../pages/HomePage";
 import { LoginPage } from "../pages/LoginPage";
 import { RegisterPage } from "../pages/RegisterPage";
 import { ProductPage } from "../pages/ProductPage";
+import { CheckoutPage } from "../pages/CheckoutPage";
 import { HeaderPage } from "../pages/HeaderPage";
 
 test ('Home-Register-Login-Cart-SignOut ToolShop automation',async({page})=>{
@@ -11,10 +12,12 @@ test ('Home-Register-Login-Cart-SignOut ToolShop automation',async({page})=>{
     const loginPage = new LoginPage(page);
     const registerPage = new RegisterPage(page);
     const productPage = new ProductPage(page);
+    const checkoutPage = new CheckoutPage(page);
     const headerPage = new HeaderPage(page);
 
 
-    const year =new Date().getFullYear();
+
+    //const year =new Date().getFullYear();
        // const uniqueEmail=`amesrkino${year}@gmail.com`;
     const uniqueEmail=`amesrkino${Date.now()}@gmail.com`;
 
@@ -39,19 +42,25 @@ test ('Home-Register-Login-Cart-SignOut ToolShop automation',async({page})=>{
     await loginPage.clickRegisterYourAccount();
     
     await registerPage.register(user);
-    //await  expect(page).toHaveURL(/auth\/login/);
+    await  expect(page).toHaveURL(/auth\/login/);
    // Dodao sam screenshot da se napravi 
-    await page.screenshot({ path: 'before-login.png', fullPage: true });
-console.log('Current URL before login:', page.url());
-    await expect(page).toHaveURL('https://practicesoftwaretesting.com/auth/login');
-    await page.waitForLoadState('domcontentloaded');
+   /*  await page.screenshot({ path: 'before-login.png', fullPage: true });
+console.log('Current URL before login:', page.url()); */
+    /* await expect(page).toHaveURL('https://practicesoftwaretesting.com/auth/login');
+    await page.waitForLoadState('domcontentloaded'); */
 // await page.waitForLoadState('networkidle');
-    await expect(loginPage.emailInput).toBeVisible({ timeout: 15000 });
+   /*  await expect(loginPage.emailInput).toBeVisible({ timeout: 15000 }); */
     await loginPage.login(user.email, user.password);
     await homePage.goto();
     await homePage.openAnyProduct();
     await productPage.addToCart();
    
    await headerPage.openCart();
+
+  await checkoutPage.clickProceedToCheckout();
+  await checkoutPage.clickProceedToCheckout();
+  await checkoutPage.clickProceedToCheckout();
+  await checkoutPage.chooseCashOnDelivery();
+  await checkoutPage.confirmPayment();
 //await page.pause();
 });

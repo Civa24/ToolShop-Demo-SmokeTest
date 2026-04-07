@@ -34,11 +34,12 @@ export class RegisterPage extends BasePage{
     await this.phoneInput.fill(user.phone);
     await this.emailInput.fill(user.email);
     await this.passwordInput.fill(user.password);
-    await Promise.all([
+    await this.registerButton.click()
+  /*   await Promise.all([
         this.page.waitForURL(/auth\/login/),
-        await this.registerButton.click()
+        
     ]);
-   
+    */
     }
   
 
