@@ -40,9 +40,11 @@ test ('Home-Register-Login-Cart-SignOut ToolShop automation',async({page})=>{
     
     await registerPage.register(user);
     //await  expect(page).toHaveURL(/auth\/login/);
-
+    await page.screenshot({ path: 'before-login.png', fullPage: true });
+console.log('Current URL before login:', page.url());
     await expect(page).toHaveURL('https://practicesoftwaretesting.com/auth/login');
-
+    
+    await expect(loginPage.emailInput).toBeVisible();
     await loginPage.login(user.email, user.password);
     await homePage.goto();
     await homePage.openAnyProduct();
