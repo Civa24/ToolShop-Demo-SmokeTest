@@ -4,16 +4,18 @@ import { HomePage } from "../pages/HomePage";
 import { LoginPage } from "../pages/LoginPage";
 import { RegisterPage } from "../pages/RegisterPage";
 import { ProductPage } from "../pages/ProductPage";
+import { HeaderPage } from "../pages/HeaderPage";
 
 test ('Home-Register-Login-Cart-SignOut ToolShop automation',async({page})=>{
     const homePage = new HomePage(page);
     const loginPage = new LoginPage(page);
     const registerPage = new RegisterPage(page);
     const productPage = new ProductPage(page);
+    const headerPage = new HeaderPage(page);
 
 
     const year =new Date().getFullYear();
-    const uniqueEmail=`amesrkos${year}@gmail.com`;
+    const uniqueEmail=`amerksss${year}@gmail.com`;
 
     const user = {
         firstName : 'Amer',
@@ -43,6 +45,7 @@ test ('Home-Register-Login-Cart-SignOut ToolShop automation',async({page})=>{
     await homePage.goto();
     await homePage.openAnyProduct();
     await productPage.addToCart();
-   // await page.pause();
-
+   
+   await headerPage.openCart();
+await page.pause();
 });
