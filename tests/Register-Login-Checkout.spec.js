@@ -44,7 +44,8 @@ test ('Home-Register-Login-Cart-SignOut ToolShop automation',async({page})=>{
     await page.screenshot({ path: 'before-login.png', fullPage: true });
 console.log('Current URL before login:', page.url());
     await expect(page).toHaveURL('https://practicesoftwaretesting.com/auth/login');
-    
+    await page.waitForLoadState('domcontentloaded');
+await page.waitForLoadState('networkidle');
     await expect(loginPage.emailInput).toBeVisible();
     await loginPage.login(user.email, user.password);
     await homePage.goto();
