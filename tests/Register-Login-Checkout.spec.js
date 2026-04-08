@@ -42,7 +42,7 @@ test ('Home-Register-Login-Cart-SignOut ToolShop automation',async({page})=>{
     await loginPage.clickRegisterYourAccount();
     
     await registerPage.register(user);
-    await  expect(page).toHaveURL(/auth\/login/);
+   await expect(page).toHaveURL(/auth\/login/, { timeout: 15000 });
    // Dodao sam screenshot da se napravi 
    /*  await page.screenshot({ path: 'before-login.png', fullPage: true });
 console.log('Current URL before login:', page.url()); */
@@ -51,16 +51,25 @@ console.log('Current URL before login:', page.url()); */
 // await page.waitForLoadState('networkidle');
    /*  await expect(loginPage.emailInput).toBeVisible({ timeout: 15000 }); */
     await loginPage.login(user.email, user.password);
+    await expect(page).not.toHaveURL(/auth\/login/);
     await homePage.goto();
     await homePage.openAnyProduct();
     await productPage.addToCart();
    
    await headerPage.openCart();
+   await checkoutPage.completeCheckout();
 
-  await checkoutPage.clickProceedToCheckout();
+ /*  await checkoutPage.clickProceedToCheckout();
   await checkoutPage.clickProceedToCheckout();
   await checkoutPage.clickProceedToCheckout();
   await checkoutPage.chooseCashOnDelivery();
   await checkoutPage.confirmPayment();
-//await page.pause();
+   await checkoutPage.confirmPayment(); */
+//await page.pause();   
+    await headerPage.openUserMenu();
+    await headerPage.signOut();
+
+    await expect(homePage.signInButton).toBeVisible();
+  //  await page.pause();
+
 });

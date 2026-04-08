@@ -13,8 +13,8 @@ export class HeaderPage {
         await this.userMenu.click();
     }
     signOut = async()=>{
-        await this.signOut.waitFor();
-        await this.signOut.click();
+        await this.signOutOption.waitFor();
+        await this.signOutOption.click();
     }
 
 }

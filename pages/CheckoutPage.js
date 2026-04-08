@@ -17,14 +17,24 @@ get paymentDropdown() {
   return this.page.locator('[data-test="finish"]');
 }
 
- clickProceedToCheckout =  async ()=> {
+ clickProceedToCheckout =  async (times)=> {
+    for (let i=0; i< times; i++){
     await this.proceedToCheckoutButton.click();
   }
+}
+ 
+
 chooseCashOnDelivery =  async ()=> {
     await this.paymentDropdown.waitFor();
     await this.paymentDropdown.selectOption('cash-on-delivery');
   }
-confirmPayment =  async ()=> {
+confirmPayment =  async (times)=> {
+    for (let i= 0; i< times ; i++){
     await this.confirmButton.click();
+  }}
+  completeCheckout = async () => {
+    await this.clickProceedToCheckout(3);
+    await this.chooseCashOnDelivery();
+    await this.confirmPayment(2);
   }
 }
