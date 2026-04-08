@@ -36,13 +36,22 @@ test ('Home-Register-Login-Cart-SignOut ToolShop automation',async({page})=>{
 
     };
 
-    
-    await homePage.goto();
-    await homePage.clickSignin();
-    await loginPage.clickRegisterYourAccount();
-    
-    await registerPage.register(user);
-   await expect(page).toHaveURL(/auth\/login/, { timeout: 15000 });
+    await test.step('Open the ToolShop website',async ()=> {
+        await homePage.goto();
+    });
+      await test.step('Click "Sign in" button in header',async ()=> {
+        await homePage.clickSignin();
+    });
+     await test.step('Click Register your account link',async ()=> {
+         await loginPage.clickRegisterYourAccount();
+    });
+    await test.step('Provide valid data in all required fields and click register',async ()=> {
+         await registerPage.register(user);
+    });
+    await test.step('Wait for the user to be redirected to the login page.',async ()=> {
+          await expect(page).toHaveURL(/auth\/login/, { timeout: 15000 });
+    });
+  
    // Dodao sam screenshot da se napravi 
    /*  await page.screenshot({ path: 'before-login.png', fullPage: true });
 console.log('Current URL before login:', page.url()); */
@@ -50,26 +59,48 @@ console.log('Current URL before login:', page.url()); */
     await page.waitForLoadState('domcontentloaded'); */
 // await page.waitForLoadState('networkidle');
    /*  await expect(loginPage.emailInput).toBeVisible({ timeout: 15000 }); */
-    await loginPage.login(user.email, user.password);
-    await expect(page).not.toHaveURL(/auth\/login/);
-    await homePage.goto();
-    await homePage.openAnyProduct();
-    await productPage.addToCart();
-   
-   await headerPage.openCart();
-   await checkoutPage.completeCheckout();
+    await test.step('Provide valid email and password then click "Login" button',async ()=> {
+        await loginPage.login(user.email, user.password);
+    });
+    await test.step('Verify that the current URL is not /auth/login.',async ()=> { 
+        await expect(page).not.toHaveURL(/auth\/login/);
+    });
+     await test.step('Navigate to the home page',async ()=> {
+        await homePage.goto();
+    });
+    await test.step('Open any Product',async ()=> {
+        await homePage.openAnyProduct();
+    });
+    
+    await test.step('Click "Add to Cart" button',async ()=> {   
+        await productPage.addToCart();
+    });
+    await test.step('Click "Cart" icon in header',async ()=> {   
+        await headerPage.openCart();
+    });
 
- /*  await checkoutPage.clickProceedToCheckout();
+     await test.step('Click "Proceed to Checkout 3 times.Then choose a valid payment type.Then click "Confirm " 2 times.',async ()=> {   
+ /* This was a original type of doing this  
+ await checkoutPage.clickProceedToCheckout();
   await checkoutPage.clickProceedToCheckout();
   await checkoutPage.clickProceedToCheckout();
   await checkoutPage.chooseCashOnDelivery();
   await checkoutPage.confirmPayment();
    await checkoutPage.confirmPayment(); */
-//await page.pause();   
-    await headerPage.openUserMenu();
-    await headerPage.signOut();
+      await checkoutPage.completeCheckout();
+    });
+    await test.step('Click on Users name (e.g."Amer Civic")',async ()=> {   
+        await headerPage.openUserMenu();
+    });
+    await test.step('Click "Sign out" button',async ()=> {   
+        await headerPage.signOut();
+    });
 
-    await expect(homePage.signInButton).toBeVisible();
+//await page.pause();   
+    await test.step('Confirm "Sign In" button is available (confriming the log out")',async ()=> {   
+        await expect(homePage.signInButton).toBeVisible();
+    });
+    
   //  await page.pause();
 
 });
