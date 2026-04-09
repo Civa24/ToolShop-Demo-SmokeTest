@@ -51,6 +51,8 @@ test ('Home-Register-Login-Cart-SignOut ToolShop automation',async({page})=>{
     await test.step('Wait for the user to be redirected to the login page.',async ()=> {
           await expect(page).toHaveURL(/auth\/login/, { timeout: 15000 });
     });
+
+    await expect(loginPage.emailInput).toBeVisible();
   
    // Dodao sam screenshot da se napravi 
    /*  await page.screenshot({ path: 'before-login.png', fullPage: true });
