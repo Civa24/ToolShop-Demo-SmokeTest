@@ -3,8 +3,14 @@ import { BasePage } from "./BasePage";
 export class HomePage extends BasePage{
     constructor(page){
         super(page);
-        this.signInButton = page.locator('[data-test="nav-sign-in"]');
-        this.firstProductCard=page.locator('a[data-test^="product-"]').first();
+    }
+
+     get signInButton() {
+    return this.page.locator('[data-test="nav-sign-in"]');
+    }
+
+    get firstProductCard() {
+    return this.page.locator('a[data-test^="product-"]').first();
     }
    goto=  async ()=>{
         await this.open('/');
