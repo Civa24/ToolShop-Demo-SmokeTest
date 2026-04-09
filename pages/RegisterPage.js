@@ -60,12 +60,12 @@ export class RegisterPage extends BasePage{
     await this.phoneInput.fill(user.phone);
     await this.emailInput.fill(user.email);
     await this.passwordInput.fill(user.password);
-    await this.registerButton.click()
-  /*   await Promise.all([
-        this.page.waitForURL(/auth\/login/),
-        
+   
+   await Promise.all([
+        this.page.waitForURL(/auth\/login/,{ timeout: 15000 }),
+         await this.registerButton.click()
     ]);
-    */
+    
     }
   
 
