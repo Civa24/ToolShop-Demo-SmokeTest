@@ -63,7 +63,7 @@ export class RegisterPage extends BasePage{
    
    await Promise.all([
         this.page.waitForURL(/auth\/login/,{ timeout: 15000 }),
-         await this.registerButton.click()
+          this.registerButton.click()
     ]);
     
     }

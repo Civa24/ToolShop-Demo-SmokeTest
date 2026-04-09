@@ -67,7 +67,7 @@ test ('Home-Register-Login-Cart-SignOut ToolShop automation',async({page})=>{
     /* await expect(page).toHaveURL('https://practicesoftwaretesting.com/auth/login');
     await page.waitForLoadState('domcontentloaded'); */
     
-    await page.waitForLoadState('networkidle');
+ //   await page.waitForLoadState('networkidle');
    /*  await expect(loginPage.emailInput).toBeVisible({ timeout: 15000 }); */
    
     await expect(page.locator('#email')).toBeVisible({timeout:15000});
