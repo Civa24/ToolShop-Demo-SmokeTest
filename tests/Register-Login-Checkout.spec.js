@@ -56,18 +56,22 @@ test ('Home-Register-Login-Cart-SignOut ToolShop automation',async({page})=>{
           await expect(page).toHaveURL(/auth\/login/, { timeout: 15000 });
     }); */
     await page.goto('/auth/login', {waitUntil: 'domcontentloaded'});
-    await page.reload();
 
+    console.log('URL before login expect:', page.url());
+    console.log('Title before login expect:', await page.title());
+    console.log('Email count:', await page.locator('#email').count());
+    console.log('Password count:', await page.locator('#password').count());
+    console.log('Login button count:', await page.locator('[data-test="login-submit"]').count());
 
     // await expect(loginPage.emailInput).toBeVisible();
     
    // Dodao sam screenshot da se napravi 
-   /*  await page.screenshot({ path: 'before-login.png', fullPage: true });
-*/
+    await page.screenshot({ path: 'before-login-PAGE.png', fullPage: true });
+
     /* await expect(page).toHaveURL('https://practicesoftwaretesting.com/auth/login');
     await page.waitForLoadState('domcontentloaded'); */
     
- //   await page.waitForLoadState('networkidle');
+   // await page.waitForLoadState('networkidle');
    /*  await expect(loginPage.emailInput).toBeVisible({ timeout: 15000 }); */
    
     await expect(page.locator('#email')).toBeVisible({timeout:15000});
