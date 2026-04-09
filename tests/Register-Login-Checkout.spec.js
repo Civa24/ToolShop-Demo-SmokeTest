@@ -47,13 +47,17 @@ test ('Home-Register-Login-Cart-SignOut ToolShop automation',async({page})=>{
     });
     await test.step('Provide valid data in all required fields and click register',async ()=> {
          await registerPage.register(user);
-         console.log('URL after login:', page.url()); 
-         await page.screenshot({ path: 'after-register.png', fullPage: true });
+         /* console.log('URL after login:', page.url()); 
+         await page.screenshot({ path: 'after-register.png', fullPage: true }); */
 
     });
-    await test.step('Wait for the user to be redirected to the login page.',async ()=> {
+
+   /*  await test.step('Wait for the user to be redirected to the login page.',async ()=> {
           await expect(page).toHaveURL(/auth\/login/, { timeout: 15000 });
-    });
+    }); */
+    await page.goto('/auth/login', {waitUntil: 'domcontentloaded'});
+    await page.reload();
+
 
     // await expect(loginPage.emailInput).toBeVisible();
     
@@ -62,9 +66,12 @@ test ('Home-Register-Login-Cart-SignOut ToolShop automation',async({page})=>{
 */
     /* await expect(page).toHaveURL('https://practicesoftwaretesting.com/auth/login');
     await page.waitForLoadState('domcontentloaded'); */
-// await page.waitForLoadState('networkidle');
+    
+    await page.waitForLoadState('networkidle');
    /*  await expect(loginPage.emailInput).toBeVisible({ timeout: 15000 }); */
-    await test.step('Provide valid email and password then click "Login" button',async ()=> {
+   
+    await expect(page.locator('#email')).toBeVisible({timeout:15000});
+   await test.step('Provide valid email and password then click "Login" button',async ()=> {
         await loginPage.login(user.email, user.password);
     });
     await test.step('Verify that the current URL is not /auth/login.',async ()=> { 

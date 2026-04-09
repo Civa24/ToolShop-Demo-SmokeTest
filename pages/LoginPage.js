@@ -1,4 +1,5 @@
 import { BasePage } from "./BasePage";
+import { expect } from "allure-playwright";
 
 export class LoginPage extends BasePage{
     constructor(page){
@@ -51,6 +52,7 @@ clickLogin =  async ()=> {
   }
 
  login= async (email, password)=> {
+    await expect(this.emailInput).toBeVisible({timeout:15000});
     await this.enterEmail(email);
     await this.enterPassword(password);
     await this.clickLogin();
