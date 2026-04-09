@@ -13,16 +13,24 @@ export class LoginPage extends BasePage{
     }
 
     get emailInput() {
+    return this.page.locator('#email');
+    }
+
+    get passwordInput() {
+    return this.page.locator('#password');
+    }
+
+    /* get emailInput() {
     return this.page.locator('[data-test="email"]');
     }
 
     get passwordInput() {
     return this.page.locator('[data-test="password"]'); 
-    }
+    }*/
 
     get loginButton() {
     return this.page.locator('[data-test="login-submit"]'); 
-    }
+    } 
 
     goto = async()=>{
         await this.open('/auth/login');
