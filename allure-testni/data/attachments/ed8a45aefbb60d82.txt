@@ -1,1 +1,0 @@
-URL after login: https://practicesoftwaretesting.com/auth/login
