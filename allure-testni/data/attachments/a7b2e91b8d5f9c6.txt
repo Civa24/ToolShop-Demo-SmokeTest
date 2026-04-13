@@ -1,0 +1,24 @@
+URL before login expect: https://practicesoftwaretesting.com/auth/login
+Title before login expect: Practice Software Testing - Toolshop - v5.0
+Email count: 1
+Password count: 1
+Login button count: 1
+Body text preview: View the Documentation for this application.
+Practice Black Box Testing & Bug Hunting
+Testing Guide
+🐛 Bug Hunting
+Home
+Categories 
+Contact
+Sign in
+ EN 
+Login
+Sign in with Google
+or use
+Email address *
+Password *
+
+Not yet an account? Register your account
+Forgot your Password?
+
+This is a DEMO application (GitHub repo), used for software testing training purpose. | Privacy Policy | Banner photo by Barn Images on Unsplash.

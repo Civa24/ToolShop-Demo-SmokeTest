@@ -1,0 +1,31 @@
+{
+  "uid": "83edc06c07f9ae9e47eb6dd1b683e4e2",
+  "name": "packages",
+  "children": [
+    {
+      "name": "Register-Login-Checkout.spec.js",
+      "children": [
+        {
+          "name": "Home-Register-Login-Cart-SignOut ToolShop automation",
+          "uid": "ab8761d2647d5494",
+          "parentUid": "9f772a91ff4e73809c919de660f61c28",
+          "status": "passed",
+          "time": {
+            "start": 1775856552169,
+            "stop": 1775856559125,
+            "duration": 6956
+          },
+          "flaky": false,
+          "newFailed": false,
+          "newPassed": false,
+          "newBroken": false,
+          "retriesCount": 38,
+          "retriesStatusChange": true,
+          "parameters": ["chromium"],
+          "tags": []
+        }
+      ],
+      "uid": "Register-Login-Checkout.spec.js"
+    }
+  ]
+}

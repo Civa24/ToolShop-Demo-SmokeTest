@@ -1,16 +1,16 @@
-import { BasePage } from "./BasePage";
+import { BasePage } from './BasePage';
 
-export class ProductPage extends BasePage{
-    constructor(page){
-        super(page);
-    }
+export class ProductPage extends BasePage {
+  constructor(page) {
+    super(page);
+  }
 
-    get addToCartButton() {
+  get addToCartButton() {
     return this.page.locator('[data-test="add-to-cart"]');
-    }
+  }
 
-    addToCart = async()=>{
-        await this.addToCartButton.waitFor();
-        await this.addToCartButton.click();
-    }
+  addToCart = async () => {
+    await this.addToCartButton.waitFor();
+    await this.addToCartButton.click();
+  };
 }

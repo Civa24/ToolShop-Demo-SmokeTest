@@ -1,1 +1,31 @@
-{"uid":"83edc06c07f9ae9e47eb6dd1b683e4e2","name":"packages","children":[{"name":"Register-Login-Checkout.spec.js","children":[{"name":"Home-Register-Login-Cart-SignOut ToolShop automation","uid":"969b6f17faa3b832","parentUid":"9f772a91ff4e73809c919de660f61c28","status":"passed","time":{"start":1775741691654,"stop":1775741704108,"duration":12454},"flaky":false,"newFailed":false,"newPassed":false,"newBroken":false,"retriesCount":1,"retriesStatusChange":false,"parameters":["chromium"],"tags":[]}],"uid":"Register-Login-Checkout.spec.js"}]}
+{
+  "uid": "83edc06c07f9ae9e47eb6dd1b683e4e2",
+  "name": "packages",
+  "children": [
+    {
+      "name": "Register-Login-Checkout.spec.js",
+      "children": [
+        {
+          "name": "Home-Register-Login-Cart-SignOut ToolShop automation",
+          "uid": "969b6f17faa3b832",
+          "parentUid": "9f772a91ff4e73809c919de660f61c28",
+          "status": "passed",
+          "time": {
+            "start": 1775741691654,
+            "stop": 1775741704108,
+            "duration": 12454
+          },
+          "flaky": false,
+          "newFailed": false,
+          "newPassed": false,
+          "newBroken": false,
+          "retriesCount": 1,
+          "retriesStatusChange": false,
+          "parameters": ["chromium"],
+          "tags": []
+        }
+      ],
+      "uid": "Register-Login-Checkout.spec.js"
+    }
+  ]
+}

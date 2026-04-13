@@ -1,0 +1,715 @@
+{
+  "uid": "9de435e5da05498c",
+  "name": "Home-Register-Login-Cart-SignOut ToolShop automation",
+  "fullName": "Register-Login-Checkout.spec.js:10:1",
+  "historyId": "949e538669092c824f172d46303ee06e:5bd835b0d6b1d4ada3b9f0db936e82c8",
+  "time": { "start": 1775831507062, "stop": 1775831542043, "duration": 34981 },
+  "status": "failed",
+  "flaky": false,
+  "newFailed": false,
+  "newBroken": false,
+  "newPassed": false,
+  "retriesCount": 0,
+  "retriesStatusChange": false,
+  "beforeStages": [],
+  "testStage": {
+    "status": "failed",
+    "steps": [
+      {
+        "name": "Before Hooks",
+        "time": {
+          "start": 1775831507054,
+          "stop": 1775831508301,
+          "duration": 1247
+        },
+        "status": "passed",
+        "steps": [
+          {
+            "name": "Fixture \"browser\"",
+            "time": {
+              "start": 1775831507074,
+              "stop": 1775831507670,
+              "duration": 596
+            },
+            "status": "passed",
+            "steps": [
+              {
+                "name": "Launch browser",
+                "time": {
+                  "start": 1775831507082,
+                  "stop": 1775831507669,
+                  "duration": 587
+                },
+                "status": "passed",
+                "steps": [],
+                "attachments": [],
+                "parameters": [],
+                "hasContent": false,
+                "shouldDisplayMessage": false,
+                "attachmentStep": false,
+                "stepsCount": 0,
+                "attachmentsCount": 0
+              }
+            ],
+            "attachments": [],
+            "parameters": [],
+            "hasContent": true,
+            "shouldDisplayMessage": false,
+            "attachmentStep": false,
+            "stepsCount": 1,
+            "attachmentsCount": 0
+          },
+          {
+            "name": "Fixture \"context\"",
+            "time": {
+              "start": 1775831507673,
+              "stop": 1775831507724,
+              "duration": 51
+            },
+            "status": "passed",
+            "steps": [
+              {
+                "name": "Create context",
+                "time": {
+                  "start": 1775831507678,
+                  "stop": 1775831507721,
+                  "duration": 43
+                },
+                "status": "passed",
+                "steps": [],
+                "attachments": [],
+                "parameters": [],
+                "hasContent": false,
+                "shouldDisplayMessage": false,
+                "attachmentStep": false,
+                "stepsCount": 0,
+                "attachmentsCount": 0
+              }
+            ],
+            "attachments": [],
+            "parameters": [],
+            "hasContent": true,
+            "shouldDisplayMessage": false,
+            "attachmentStep": false,
+            "stepsCount": 1,
+            "attachmentsCount": 0
+          },
+          {
+            "name": "Fixture \"page\"",
+            "time": {
+              "start": 1775831507725,
+              "stop": 1775831508301,
+              "duration": 576
+            },
+            "status": "passed",
+            "steps": [
+              {
+                "name": "Create page",
+                "time": {
+                  "start": 1775831507729,
+                  "stop": 1775831508300,
+                  "duration": 571
+                },
+                "status": "passed",
+                "steps": [],
+                "attachments": [],
+                "parameters": [],
+                "hasContent": false,
+                "shouldDisplayMessage": false,
+                "attachmentStep": false,
+                "stepsCount": 0,
+                "attachmentsCount": 0
+              }
+            ],
+            "attachments": [],
+            "parameters": [],
+            "hasContent": true,
+            "shouldDisplayMessage": false,
+            "attachmentStep": false,
+            "stepsCount": 1,
+            "attachmentsCount": 0
+          }
+        ],
+        "attachments": [],
+        "parameters": [],
+        "hasContent": true,
+        "shouldDisplayMessage": false,
+        "attachmentStep": false,
+        "stepsCount": 6,
+        "attachmentsCount": 0
+      },
+      {
+        "name": "Open the ToolShop website",
+        "time": {
+          "start": 1775831508304,
+          "stop": 1775831509707,
+          "duration": 1403
+        },
+        "status": "passed",
+        "steps": [
+          {
+            "name": "Navigate to \"/\"",
+            "time": {
+              "start": 1775831508315,
+              "stop": 1775831509707,
+              "duration": 1392
+            },
+            "status": "passed",
+            "steps": [],
+            "attachments": [],
+            "parameters": [],
+            "hasContent": false,
+            "shouldDisplayMessage": false,
+            "attachmentStep": false,
+            "stepsCount": 0,
+            "attachmentsCount": 0
+          }
+        ],
+        "attachments": [],
+        "parameters": [],
+        "hasContent": true,
+        "shouldDisplayMessage": false,
+        "attachmentStep": false,
+        "stepsCount": 1,
+        "attachmentsCount": 0
+      },
+      {
+        "name": "Click \"Sign in\" button in header",
+        "time": {
+          "start": 1775831509708,
+          "stop": 1775831510748,
+          "duration": 1040
+        },
+        "status": "passed",
+        "steps": [
+          {
+            "name": "Click locator('[data-test=\"nav-sign-in\"]')",
+            "time": {
+              "start": 1775831509718,
+              "stop": 1775831510748,
+              "duration": 1030
+            },
+            "status": "passed",
+            "steps": [],
+            "attachments": [],
+            "parameters": [],
+            "hasContent": false,
+            "shouldDisplayMessage": false,
+            "attachmentStep": false,
+            "stepsCount": 0,
+            "attachmentsCount": 0
+          }
+        ],
+        "attachments": [],
+        "parameters": [],
+        "hasContent": true,
+        "shouldDisplayMessage": false,
+        "attachmentStep": false,
+        "stepsCount": 1,
+        "attachmentsCount": 0
+      },
+      {
+        "name": "Click Register your account link",
+        "time": {
+          "start": 1775831510749,
+          "stop": 1775831511697,
+          "duration": 948
+        },
+        "status": "passed",
+        "steps": [
+          {
+            "name": "Click locator('[data-test=\"register-link\"]')",
+            "time": {
+              "start": 1775831510757,
+              "stop": 1775831511697,
+              "duration": 940
+            },
+            "status": "passed",
+            "steps": [],
+            "attachments": [],
+            "parameters": [],
+            "hasContent": false,
+            "shouldDisplayMessage": false,
+            "attachmentStep": false,
+            "stepsCount": 0,
+            "attachmentsCount": 0
+          }
+        ],
+        "attachments": [],
+        "parameters": [],
+        "hasContent": true,
+        "shouldDisplayMessage": false,
+        "attachmentStep": false,
+        "stepsCount": 1,
+        "attachmentsCount": 0
+      },
+      {
+        "name": "Provide valid data in all required fields and click register",
+        "time": {
+          "start": 1775831511699,
+          "stop": 1775831525657,
+          "duration": 13958
+        },
+        "status": "passed",
+        "steps": [
+          {
+            "name": "Fill \"Amer\" locator('[data-test=\"first-name\"]')",
+            "time": {
+              "start": 1775831511704,
+              "stop": 1775831512536,
+              "duration": 832
+            },
+            "status": "passed",
+            "steps": [],
+            "attachments": [],
+            "parameters": [],
+            "hasContent": false,
+            "shouldDisplayMessage": false,
+            "attachmentStep": false,
+            "stepsCount": 0,
+            "attachmentsCount": 0
+          },
+          {
+            "name": "Fill \"Ćivić\" locator('[data-test=\"last-name\"]')",
+            "time": {
+              "start": 1775831512540,
+              "stop": 1775831513372,
+              "duration": 832
+            },
+            "status": "passed",
+            "steps": [],
+            "attachments": [],
+            "parameters": [],
+            "hasContent": false,
+            "shouldDisplayMessage": false,
+            "attachmentStep": false,
+            "stepsCount": 0,
+            "attachmentsCount": 0
+          },
+          {
+            "name": "Fill \"2002-11-29\" locator('[data-test=\"dob\"]')",
+            "time": {
+              "start": 1775831513375,
+              "stop": 1775831514198,
+              "duration": 823
+            },
+            "status": "passed",
+            "steps": [],
+            "attachments": [],
+            "parameters": [],
+            "hasContent": false,
+            "shouldDisplayMessage": false,
+            "attachmentStep": false,
+            "stepsCount": 0,
+            "attachmentsCount": 0
+          },
+          {
+            "name": "Fill \"Ulica V-divizije NOP-a\" locator('[data-test=\"street\"]')",
+            "time": {
+              "start": 1775831514203,
+              "stop": 1775831515039,
+              "duration": 836
+            },
+            "status": "passed",
+            "steps": [],
+            "attachments": [],
+            "parameters": [],
+            "hasContent": false,
+            "shouldDisplayMessage": false,
+            "attachmentStep": false,
+            "stepsCount": 0,
+            "attachmentsCount": 0
+          },
+          {
+            "name": "Fill \"72240\" locator('[data-test=\"postal_code\"]')",
+            "time": {
+              "start": 1775831515042,
+              "stop": 1775831515868,
+              "duration": 826
+            },
+            "status": "passed",
+            "steps": [],
+            "attachments": [],
+            "parameters": [],
+            "hasContent": false,
+            "shouldDisplayMessage": false,
+            "attachmentStep": false,
+            "stepsCount": 0,
+            "attachmentsCount": 0
+          },
+          {
+            "name": "Fill \"Kakanj\" locator('[data-test=\"city\"]')",
+            "time": {
+              "start": 1775831515873,
+              "stop": 1775831516705,
+              "duration": 832
+            },
+            "status": "passed",
+            "steps": [],
+            "attachments": [],
+            "parameters": [],
+            "hasContent": false,
+            "shouldDisplayMessage": false,
+            "attachmentStep": false,
+            "stepsCount": 0,
+            "attachmentsCount": 0
+          },
+          {
+            "name": "Fill \"Federacija\" locator('[data-test=\"state\"]')",
+            "time": {
+              "start": 1775831516709,
+              "stop": 1775831517561,
+              "duration": 852
+            },
+            "status": "passed",
+            "steps": [],
+            "attachments": [],
+            "parameters": [],
+            "hasContent": false,
+            "shouldDisplayMessage": false,
+            "attachmentStep": false,
+            "stepsCount": 0,
+            "attachmentsCount": 0
+          },
+          {
+            "name": "Select option locator('[data-test=\"country\"]')",
+            "time": {
+              "start": 1775831517565,
+              "stop": 1775831518385,
+              "duration": 820
+            },
+            "status": "passed",
+            "steps": [],
+            "attachments": [],
+            "parameters": [],
+            "hasContent": false,
+            "shouldDisplayMessage": false,
+            "attachmentStep": false,
+            "stepsCount": 0,
+            "attachmentsCount": 0
+          },
+          {
+            "name": "Wait for timeout",
+            "time": {
+              "start": 1775831518387,
+              "stop": 1775831518899,
+              "duration": 512
+            },
+            "status": "passed",
+            "steps": [],
+            "attachments": [],
+            "parameters": [],
+            "hasContent": false,
+            "shouldDisplayMessage": false,
+            "attachmentStep": false,
+            "stepsCount": 0,
+            "attachmentsCount": 0
+          },
+          {
+            "name": "Dispatch \"change\" locator('[data-test=\"country\"]')",
+            "time": {
+              "start": 1775831518903,
+              "stop": 1775831519740,
+              "duration": 837
+            },
+            "status": "passed",
+            "steps": [],
+            "attachments": [],
+            "parameters": [],
+            "hasContent": false,
+            "shouldDisplayMessage": false,
+            "attachmentStep": false,
+            "stepsCount": 0,
+            "attachmentsCount": 0
+          },
+          {
+            "name": "Blur locator('[data-test=\"country\"]')",
+            "time": {
+              "start": 1775831519743,
+              "stop": 1775831520565,
+              "duration": 822
+            },
+            "status": "passed",
+            "steps": [],
+            "attachments": [],
+            "parameters": [],
+            "hasContent": false,
+            "shouldDisplayMessage": false,
+            "attachmentStep": false,
+            "stepsCount": 0,
+            "attachmentsCount": 0
+          },
+          {
+            "name": "Fill \"061444555\" locator('[data-test=\"phone\"]')",
+            "time": {
+              "start": 1775831520569,
+              "stop": 1775831521392,
+              "duration": 823
+            },
+            "status": "passed",
+            "steps": [],
+            "attachments": [],
+            "parameters": [],
+            "hasContent": false,
+            "shouldDisplayMessage": false,
+            "attachmentStep": false,
+            "stepsCount": 0,
+            "attachmentsCount": 0
+          },
+          {
+            "name": "Fill \"amesrkino1775831508302@gmail.com\" locator('[data-test=\"email\"]')",
+            "time": {
+              "start": 1775831521395,
+              "stop": 1775831522217,
+              "duration": 822
+            },
+            "status": "passed",
+            "steps": [],
+            "attachments": [],
+            "parameters": [],
+            "hasContent": false,
+            "shouldDisplayMessage": false,
+            "attachmentStep": false,
+            "stepsCount": 0,
+            "attachmentsCount": 0
+          },
+          {
+            "name": "Fill \"Atlantko321.\" locator('[data-test=\"password\"]')",
+            "time": {
+              "start": 1775831522220,
+              "stop": 1775831523058,
+              "duration": 838
+            },
+            "status": "passed",
+            "steps": [],
+            "attachments": [],
+            "parameters": [],
+            "hasContent": false,
+            "shouldDisplayMessage": false,
+            "attachmentStep": false,
+            "stepsCount": 0,
+            "attachmentsCount": 0
+          },
+          {
+            "name": "Wait for timeout",
+            "time": {
+              "start": 1775831523060,
+              "stop": 1775831523570,
+              "duration": 510
+            },
+            "status": "passed",
+            "steps": [],
+            "attachments": [],
+            "parameters": [],
+            "hasContent": false,
+            "shouldDisplayMessage": false,
+            "attachmentStep": false,
+            "stepsCount": 0,
+            "attachmentsCount": 0
+          },
+          {
+            "name": "Click locator('[data-test=\"register-submit\"]')",
+            "time": {
+              "start": 1775831523573,
+              "stop": 1775831524784,
+              "duration": 1211
+            },
+            "status": "passed",
+            "steps": [],
+            "attachments": [],
+            "parameters": [],
+            "hasContent": false,
+            "shouldDisplayMessage": false,
+            "attachmentStep": false,
+            "stepsCount": 0,
+            "attachmentsCount": 0
+          },
+          {
+            "name": "Click locator('[data-test=\"register-submit\"]')",
+            "time": {
+              "start": 1775831524787,
+              "stop": 1775831525656,
+              "duration": 869
+            },
+            "status": "passed",
+            "steps": [],
+            "attachments": [],
+            "parameters": [],
+            "hasContent": false,
+            "shouldDisplayMessage": false,
+            "attachmentStep": false,
+            "stepsCount": 0,
+            "attachmentsCount": 0
+          }
+        ],
+        "attachments": [],
+        "parameters": [],
+        "hasContent": true,
+        "shouldDisplayMessage": false,
+        "attachmentStep": false,
+        "stepsCount": 17,
+        "attachmentsCount": 0
+      },
+      {
+        "name": "Provide valid email and password then click \"Login\" button",
+        "time": { "start": 1775831525658 },
+        "status": "unknown",
+        "steps": [
+          {
+            "name": "Fill \"amesrkino1775831508302@gmail.com\" locator('[data-test=\"email\"]')",
+            "time": {
+              "start": 1775831525661,
+              "stop": 1775831526494,
+              "duration": 833
+            },
+            "status": "passed",
+            "steps": [],
+            "attachments": [],
+            "parameters": [],
+            "hasContent": false,
+            "shouldDisplayMessage": false,
+            "attachmentStep": false,
+            "stepsCount": 0,
+            "attachmentsCount": 0
+          },
+          {
+            "name": "Fill \"Atlantko321.\" locator('[data-test=\"password\"]')",
+            "time": {
+              "start": 1775831526498,
+              "stop": 1775831527332,
+              "duration": 834
+            },
+            "status": "passed",
+            "steps": [],
+            "attachments": [],
+            "parameters": [],
+            "hasContent": false,
+            "shouldDisplayMessage": false,
+            "attachmentStep": false,
+            "stepsCount": 0,
+            "attachmentsCount": 0
+          },
+          {
+            "name": "Click locator('[data-test=\"login-submit\"]')",
+            "time": { "start": 1775831527335 },
+            "status": "unknown",
+            "steps": [],
+            "attachments": [],
+            "parameters": [],
+            "hasContent": false,
+            "shouldDisplayMessage": false,
+            "attachmentStep": false,
+            "stepsCount": 0,
+            "attachmentsCount": 0
+          }
+        ],
+        "attachments": [],
+        "parameters": [],
+        "hasContent": true,
+        "shouldDisplayMessage": false,
+        "attachmentStep": false,
+        "stepsCount": 3,
+        "attachmentsCount": 0
+      },
+      {
+        "name": "After Hooks",
+        "time": {
+          "start": 1775831542600,
+          "stop": 1775831542683,
+          "duration": 83
+        },
+        "status": "passed",
+        "steps": [
+          {
+            "name": "Fixture \"page\"",
+            "time": {
+              "start": 1775831542602,
+              "stop": 1775831542603,
+              "duration": 1
+            },
+            "status": "passed",
+            "steps": [],
+            "attachments": [],
+            "parameters": [],
+            "hasContent": false,
+            "shouldDisplayMessage": false,
+            "attachmentStep": false,
+            "stepsCount": 0,
+            "attachmentsCount": 0
+          },
+          {
+            "name": "Fixture \"context\"",
+            "time": {
+              "start": 1775831542604,
+              "stop": 1775831542655,
+              "duration": 51
+            },
+            "status": "passed",
+            "steps": [
+              {
+                "name": "Close context",
+                "time": {
+                  "start": 1775831542614,
+                  "stop": 1775831542655,
+                  "duration": 41
+                },
+                "status": "passed",
+                "steps": [],
+                "attachments": [],
+                "parameters": [],
+                "hasContent": false,
+                "shouldDisplayMessage": false,
+                "attachmentStep": false,
+                "stepsCount": 0,
+                "attachmentsCount": 0
+              }
+            ],
+            "attachments": [],
+            "parameters": [],
+            "hasContent": true,
+            "shouldDisplayMessage": false,
+            "attachmentStep": false,
+            "stepsCount": 1,
+            "attachmentsCount": 0
+          }
+        ],
+        "attachments": [],
+        "parameters": [],
+        "hasContent": true,
+        "shouldDisplayMessage": false,
+        "attachmentStep": false,
+        "stepsCount": 3,
+        "attachmentsCount": 0
+      }
+    ],
+    "attachments": [],
+    "parameters": [],
+    "hasContent": true,
+    "shouldDisplayMessage": false,
+    "attachmentStep": false,
+    "stepsCount": 39,
+    "attachmentsCount": 0
+  },
+  "afterStages": [],
+  "labels": [
+    { "name": "language", "value": "javascript" },
+    { "name": "framework", "value": "playwright" },
+    { "name": "package", "value": "Register-Login-Checkout.spec.js" },
+    {
+      "name": "titlePath",
+      "value": " > chromium > Register-Login-Checkout.spec.js"
+    },
+    { "name": "host", "value": "DESKTOP-9TBS3A7" },
+    { "name": "thread", "value": "pid-38700-worker-0" },
+    { "name": "parentSuite", "value": "chromium" },
+    { "name": "suite", "value": "Register-Login-Checkout.spec.js" },
+    { "name": "resultFormat", "value": "allure2" }
+  ],
+  "parameters": [{ "name": "Project", "value": "chromium" }],
+  "links": [],
+  "hidden": true,
+  "retry": true,
+  "extra": { "categories": [], "tags": [] },
+  "source": "9de435e5da05498c.json",
+  "parameterValues": ["chromium"]
+}

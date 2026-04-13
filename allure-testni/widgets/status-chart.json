@@ -1,0 +1,9 @@
+[
+  {
+    "uid": "ab8761d2647d5494",
+    "name": "Home-Register-Login-Cart-SignOut ToolShop automation",
+    "time": { "start": 1775856552169, "stop": 1775856559125, "duration": 6956 },
+    "status": "passed",
+    "severity": "normal"
+  }
+]
