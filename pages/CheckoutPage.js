@@ -17,22 +17,22 @@ export class CheckoutPage extends BasePage {
     return this.page.locator('[data-test="finish"]');
   }
 
-  clickProceedToCheckout = async (times) => {
+    async clickProceedToCheckout(times)  {
     for (let i = 0; i < times; i++) {
       await this.proceedToCheckoutButton.click();
     }
   };
 
-  chooseCashOnDelivery = async () => {
+    async chooseCashOnDelivery() {
     await this.paymentDropdown.waitFor();
     await this.paymentDropdown.selectOption('cash-on-delivery');
   };
-  confirmPayment = async (times) => {
+    async confirmPayment(times) {
     for (let i = 0; i < times; i++) {
       await this.confirmButton.click();
     }
   };
-  completeCheckout = async () => {
+    async completeCheckout() {
     await this.clickProceedToCheckout(3);
     await this.chooseCashOnDelivery();
     await this.confirmPayment(2);

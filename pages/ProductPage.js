@@ -9,7 +9,7 @@ export class ProductPage extends BasePage {
     return this.page.locator('[data-test="add-to-cart"]');
   }
 
-  addToCart = async () => {
+  async addToCart() {
     await this.addToCartButton.waitFor();
     await this.addToCartButton.click();
   };

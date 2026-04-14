@@ -42,11 +42,11 @@ export class RegisterPage extends BasePage {
     return this.page.locator('[data-test="register-submit"]');
   }
 
-  goto = async () => {
+  async goto() {
     await this.open('/auth/register');
   };
 
-  register = async (user) => {
+  async register(user) {
     await this.firstNameInput.fill(user.firstName);
     await this.lastNameInput.fill(user.lastName);
     await this.dateOfBirthInput.fill(user.dateOfBirth);
@@ -60,10 +60,6 @@ export class RegisterPage extends BasePage {
     await this.emailInput.fill(user.email);
     await this.passwordInput.fill(user.password);
     await this.registerButton.click();
-    /*   await Promise.all([
-        this.page.waitForURL(/auth\/login/),
-        
-    ]);
-    */
+   
   };
 }

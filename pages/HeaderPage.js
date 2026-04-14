@@ -12,13 +12,13 @@ export class HeaderPage {
   get signOutOption() {
     return this.page.locator('[data-test="nav-sign-out"]');
   }
-  openCart = async () => {
+  async openCart (){
     await this.cartButton.click();
   };
-  openUserMenu = async () => {
+  async openUserMenu() {
     await this.userMenu.click();
   };
-  signOut = async () => {
+  async  signOut() {
     await this.signOutOption.waitFor();
     await this.signOutOption.click();
   };

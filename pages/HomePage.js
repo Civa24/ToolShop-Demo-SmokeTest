@@ -12,13 +12,13 @@ export class HomePage extends BasePage {
   get firstProductCard() {
     return this.page.locator('a[data-test^="product-"]').first();
   }
-  goto = async () => {
+  async goto() {
     await this.open('/');
   };
-  clickSignin = async () => {
+  async clickSignin(){
     await this.signInButton.click();
   };
-  openAnyProduct = async () => {
+  async openAnyProduct(){
     await this.firstProductCard.click();
   };
 }
