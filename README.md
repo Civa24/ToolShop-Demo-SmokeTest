@@ -43,7 +43,7 @@ This project was created to practice and demonstrate automated UI testing on the
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/your-username/ToolShop-Demo-SmokeTest.git
+git clone https://github.com/Civa24/ToolShop-Demo-SmokeTest.git
 cd ToolShop-Demo-SmokeTest
 
 ### 2.Install dependecises
@@ -62,3 +62,8 @@ npm run test ||  npm test
 ### how to run playwright reported
 
 npx playwright show-report
+
+
+### -- OPTIONAL -- how to install Allure report
+
+npx allure-commandline serve allure-results
