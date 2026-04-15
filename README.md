@@ -37,3 +37,28 @@ This project was created to practice and demonstrate automated UI testing on the
 - **Prettier**
 - **ESLint**
 
+
+
+## Installation and Setup
+
+### 1. Clone the repository
+```bash
+git clone https://github.com/your-username/ToolShop-Demo-SmokeTest.git
+cd ToolShop-Demo-SmokeTest
+
+### 2.Install dependecises
+npm install
+
+### 3.Install playwright browsers
+
+npx playwright install
+
+
+### How to run tests
+
+npm run test ||  npm test
+
+
+### how to run playwright reported
+
+npx playwright show-report
