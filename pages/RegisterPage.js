@@ -1,28 +1,52 @@
-import { BasePage } from "./BasePage";
+import { BasePage } from './BasePage';
 
-export class RegisterPage extends BasePage{
-    constructor(page){
-        super(page);
-    
-      this.firstNameInput = page.locator('[data-test="first-name"]')
-    this.lastNameInput = page.locator('[data-test="last-name"]')
-    this.dateOfBirthInput = page.locator('[data-test="dob"]')
-    this.streetInput = page.locator('[data-test="street"]')
-    this.postcodeInput = page.locator('[data-test="postal_code"]')
-    this.cityInput =  page.locator('[data-test="city"]')
-    this.stateInput =  page.locator('[data-test="state"]')
-    this.countryInput =  page.locator('[data-test="country"]')
-    this.phoneInput =  page.locator('[data-test="phone"]')
-    this.emailInput =  page.locator('[data-test="email"]')
-    this.passwordInput =  page.locator('[data-test="password"]')
-    this.registerButton = page.locator('[data-test="register-submit"]')
+export class RegisterPage extends BasePage {
+  constructor(page) {
+    super(page);
   }
 
-   goto =  async ()=>{
-        await this.open('/auth/register');
-    }
+  get firstNameInput() {
+    return this.page.locator('[data-test="first-name"]');
+  }
+  get lastNameInput() {
+    return this.page.locator('[data-test="last-name"]');
+  }
+  get dateOfBirthInput() {
+    return this.page.locator('[data-test="dob"]');
+  }
+  get streetInput() {
+    return this.page.locator('[data-test="street"]');
+  }
+  get postcodeInput() {
+    return this.page.locator('[data-test="postal_code"]');
+  }
+  get cityInput() {
+    return this.page.locator('[data-test="city"]');
+  }
+  get stateInput() {
+    return this.page.locator('[data-test="state"]');
+  }
+  get countryInput() {
+    return this.page.locator('[data-test="country"]');
+  }
+  get phoneInput() {
+    return this.page.locator('[data-test="phone"]');
+  }
+  get emailInput() {
+    return this.page.locator('[data-test="email"]');
+  }
+  get passwordInput() {
+    return this.page.locator('[data-test="password"]');
+  }
+  get registerButton() {
+    return this.page.locator('[data-test="register-submit"]');
+  }
 
-   register =  async (user)=>{
+  async goto() {
+    await this.open('/auth/register');
+  };
+
+  async register(user) {
     await this.firstNameInput.fill(user.firstName);
     await this.lastNameInput.fill(user.lastName);
     await this.dateOfBirthInput.fill(user.dateOfBirth);
@@ -30,15 +54,12 @@ export class RegisterPage extends BasePage{
     await this.postcodeInput.fill(user.postcode);
     await this.cityInput.fill(user.city);
     await this.stateInput.fill(user.state);
-    await this.countryInput.selectOption({ label: user.country });
+    await this.countryInput.click();
+    await this.countryInput.selectOption({ label: 'Bosnia and Herzegovina' });
     await this.phoneInput.fill(user.phone);
     await this.emailInput.fill(user.email);
     await this.passwordInput.fill(user.password);
     await this.registerButton.click();
-    }
-  
-
-
-
-
+   
+  };
 }

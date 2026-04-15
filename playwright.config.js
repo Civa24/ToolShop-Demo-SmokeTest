@@ -1,28 +1,25 @@
 // @ts-check
 import { defineConfig, devices } from '@playwright/test';
 
-
 /**
  * Read environment variables from file.
  * https://github.com/motdotla/dotenv
  */
 // require('dotenv').config();
 
-
 /**
  * @see https://playwright.dev/docs/test-configuration
  * @type {import('@playwright/test').PlaywrightTestConfig}
  */
-export default defineConfig ( {
+export default defineConfig({
   testDir: './tests',
   /* Maximum time one test can run for. */
-  timeout: 30 * 1000,
+  timeout: 60 * 1000,
   expect: {
     /**
      * Maximum time expect() should wait for the condition to be met.
      * For example in `await expect(locator).toHaveText();`
      */
-    timeout: 5000
   },
   /* Run tests in files in parallel */
   fullyParallel: true,
@@ -33,23 +30,21 @@ export default defineConfig ( {
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter:[['list'] ,
-  ['html'],],
+  reporter: [['list'], ['allure-playwright'], ['html']],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Maximum time each action such as `click()` can take. Defaults to 0 (no limit). */
     actionTimeout: 0,
-    
+
     /* Base URL to use in actions like `await page.goto('/')`. */
-     baseURL: 'https://practicesoftwaretesting.com',
-     headless: false,
-     
+    baseURL: 'https://practicesoftwaretesting.com',
+    headless: true,
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
-    launchOptions:{
+       /*  launchOptions:{
       slowMo:800,
-    },
+    },   */
   },
 
   /* Configure projects for major browsers */
@@ -61,7 +56,7 @@ export default defineConfig ( {
       },
     },
 
-   /*  {
+    /*  {
       name: 'firefox',
       use: {
         ...devices['Desktop Firefox'],
@@ -113,5 +108,3 @@ export default defineConfig ( {
   //   port: 3000,
   // },
 });
-
-
